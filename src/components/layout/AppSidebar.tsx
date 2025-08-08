@@ -7,8 +7,7 @@ import {
   PhoneOff, 
   Users, 
   Settings,
-  Calendar,
-  FileText
+  Calendar
 } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 
@@ -33,8 +32,8 @@ const items = [
   { title: "Missed", url: "/calls/missed", icon: PhoneMissed },
   { title: "Failed", url: "/calls/failed", icon: PhoneOff },
   { title: "Contacts", url: "/contacts", icon: Users },
-  { title: "Schedule", url: "/schedule", icon: Calendar },
-  { title: "Reports", url: "/reports", icon: FileText },
+  { title: "Follow-ups", url: "/follow-ups", icon: Calendar },
+  { title: "Reports", url: "/reports", icon: BarChart3 },
   { title: "Settings", url: "/settings", icon: Settings },
 ]
 
