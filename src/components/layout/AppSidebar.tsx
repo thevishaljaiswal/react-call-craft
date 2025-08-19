@@ -33,6 +33,7 @@ const items = [
   { title: "Failed", url: "/calls/failed", icon: PhoneOff },
   { title: "Contacts", url: "/contacts", icon: Users },
   { title: "Follow-ups", url: "/follow-ups", icon: Calendar },
+  { title: "Agent Management", url: "/agents", icon: Users },
   { title: "Reports", url: "/reports", icon: BarChart3 },
   { title: "Settings", url: "/settings", icon: Settings },
 ]

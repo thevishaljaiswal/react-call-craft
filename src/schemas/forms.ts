@@ -2,11 +2,12 @@ import { z } from "zod"
 
 export const callFormSchema = z.object({
   callType: z.enum(["incoming", "outgoing", "missed", "failed"]),
+  direction: z.enum(["inbound", "outbound"]),
   callerName: z.string().min(1, "Caller name is required"),
   callerNumber: z.string().min(1, "Caller number is required"),
   receiverName: z.string().min(1, "Receiver name is required"),
   receiverNumber: z.string().min(1, "Receiver number is required"),
-  startTime: z.date(),
+  startTime: z.date().optional(),
   endTime: z.date().optional(),
   duration: z.number().optional(),
   status: z.enum(["open", "in-progress", "completed", "escalated", "failed", "missed"]),
@@ -15,6 +16,7 @@ export const callFormSchema = z.object({
   tags: z.array(z.string()).default([]),
   callSource: z.enum(["phone", "webrtc", "mobile", "voip"]).default("phone"),
   missedReason: z.string().optional(),
+  assignedTo: z.string().optional(),
 })
 
 export const contactFormSchema = z.object({
